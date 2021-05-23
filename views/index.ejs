@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Hodlinfo</title>
+</head>
+<body class="dark">
+    <!-- Mian Section -->
+    <div class="container flex-column">
+    <div class="container flex justify-between align-center">
+            <div class="flex-column"><p class="align-bottom roboto-condensed"><span class="theme-color font-size-48">HODLINFO</span><span class="white-color font-size-20">.com</span></p>
+        <p class="roboto-condensed"><span class="grey-color">Powered By </span><span class="theme-color">Finstreet</span></p></div>
+        <div class="picker-section">
+            <select class="font-size-15 border-radius-5 grey-back white-color mr-15 p-2 pr-25 roboto-condensed bold" name="base_unit" id="">
+                <option value="volvo">INR</option>
+                <option value="saab">BTC</option>
+            </select>
+            <select class="border-radius-5 font-size-15 grey-back white-color mr-15 p-2 pr-25 roboto-condensed bold" name="base_unit" id="">
+                <option value="saab">BTC</option>
+                <option value="volvo">INR</option>
+            </select>
+        </div>
+        <div class="btn-section">
+            <span class="num-info mr-15 p-1 border-round theme-color">58</span>
+            <button class="telegram-connect p-2 pb-5 border-radius-10 theme-back roboto-condensed bold white-color font-size-15 mr-15"> <img width="16px" class="top-5" src="/telegram.svg" alt="telegram icon"> Connect Telegram</button>
+            <label class="switch">
+                <input checked type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>    
+    </div>
+    <div class="font-size-20 p-2 mt-5 table-head roboto-condensed bold grey-color flex">
+            <span class="flex justify-center w-2">#</span>
+            <span class="flex justify-center w-18">name</span>
+            <span class="flex justify-center w-20">Last</span>
+            <span class="flex justify-center w-30">Buy / Sell Price</span>
+            <span class="flex justify-center w-20">volume</span>
+            <span class="flex justify-center w-10">base_unit</span>
+    </div>
+    <% for(let index=0;index<10;index++) { %>
+        <div
+            class="table-row font-size-20 mt-1 table-row roboto-condensed bold p-2 border-radius-10 grey-back white-color flex">
+            <span class="flex justify-center w-2"><%=index+1%></span>
+            <span class="flex justify-center w-18"><%=data[index].name%></span>
+            <span class="flex justify-center w-20"><%=data[index].last%></span>
+            <span class="flex justify-center w-30"><%=data[index].buy%>/<%=data[index].sell%></span>
+            <span class="flex justify-center w-20"><%=data[index].volume%></span>
+            <span class="flex justify-center w-10"><%=data[index].base_unit%></span>
+        </div>
+        <% } %>
+    </div>
+</body>
+</html>

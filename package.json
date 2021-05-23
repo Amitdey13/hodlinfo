@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Amitdey13/hodlinfo/issues"
   },
-  "homepage": "https://github.com/Amitdey13/hodlinfo#readme"
+  "homepage": "https://github.com/Amitdey13/hodlinfo#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  }
 }
